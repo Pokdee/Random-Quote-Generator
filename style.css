@@ -19,6 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .quote {
@@ -48,9 +49,17 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: italic;
+  text-transform: capitalize;
 }
 .social-icon {
   grid-area: 3/1/4/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-twit {
+  display: block;
+  width: 30%;
 }
 .btn-new {
   grid-area: 3/3/4/4;
@@ -60,4 +69,29 @@ body {
   height: 1.5rem;
   font-family: inherit;
   font-size: 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.loader {
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border-radius: 100%;
+  border: 1rem solid hsl(90, 85%, 42%);
+  border-top: 20px solid hsla(90, 90%, 51%, 0.936);
+  animation: spin 2s linear infinite;
+  position: absolute;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide {
+  display: none;
 }
